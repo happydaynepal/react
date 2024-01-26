@@ -1,28 +1,26 @@
 import React from 'react'
-import Header from './Header'
-import Displaysecion from './Pages/Displaysecion'
-import Technology from './Pages/Technology'
-import Address from './Pages/Address'
-import Header2 from './Pages/Header2'
-import End from './Pages/End'
+import Homepage from './Pages/Homepage'
+import { Route, Routes } from 'react-router'
+import About from './Pages/About'
+import NotFound from './Pages/NotFound'
 
 const App = () => {
   return (
-    <div>
-      <Header />
-      <Header2 />
-      <Displaysecion />
-      <Technology />
-      <Address />
-      <End />
-      <h1>fkhjsdb;fkhjbsv
+    <>
 
-      </h1>
+      <Routes>
+        <Route path='/' element={<Homepage />} />
+        <Route path='About' element={<About />} />
+        <Route path='*' element={<NotFound />} />
 
+
+      </Routes>
 
 
 
-    </div>
+
+
+    </>
   )
 }
 
